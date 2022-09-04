@@ -10,7 +10,7 @@ function getSpeciesByIds(...ids) {
   if (typeof ids === 'object') {
     // console.log('entrei if');
     ids.forEach((idSpecie, index) => {
-      console.log(`${index} = ${idSpecie}`);
+      // console.log(`${index} = ${idSpecie}`);
       array[index] = data.species.find((specie) => specie.id === idSpecie); // por qual motivo vira um array de array se eu colodar array[index]? pq filter cria um array a cada valor id equivalente
     });
     return array;
