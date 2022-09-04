@@ -11,7 +11,7 @@ function countAnimals(animal) {
     return objSpecies;
   }
   const animalData = Object.values(animal);
-  if(animalData.length === 1) {
+  if (animalData.length === 1) {
     const specieSearch = data.species.find((specie) => specie.name === animalData[0]);
     return specieSearch.residents.length;
   }
