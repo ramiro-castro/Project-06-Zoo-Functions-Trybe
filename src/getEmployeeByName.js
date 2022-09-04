@@ -16,6 +16,6 @@ function getEmployeeByName(employeeName) {
   return obj;
 }
 
- console.log(getEmployeeByName('Elser'));
+// console.log(getEmployeeByName('Elser'));
 
 module.exports = getEmployeeByName;
