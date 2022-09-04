@@ -34,6 +34,7 @@ describe('Testes da função HandlerElephants', () => {
     const expected = undefined;
     expect(actual).toBe(expected);
   });
+
   it('retorna aviso caso nao tenha sido passado um parametro do tipo string', () => {
     const actual = handlerElephants(1993);
     const expected = 'Parâmetro inválido, é necessário uma string';
