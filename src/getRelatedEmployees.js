@@ -33,7 +33,7 @@ function getRelatedEmployees(managerId) {
 }
 
 // const stephanieId = '9e7d4524-363c-416a-8759-8aa7e50c0992';
-// console.log(`ID: ${getRelatedEmployees(stephanieId)}`);
+// console.log(`ID: ${getRelatedEmployees('4b40a139-d4dc-4f09-822d-ec25e819a5ad')}`);
 // console.log(`ID: ${isManager('4b40a139-d4dc-4f09-822d-ec25e819a5ad')}`);
 module.exports = { isManager, getRelatedEmployees };
 // codigo que busca pessoas geridas usando for
