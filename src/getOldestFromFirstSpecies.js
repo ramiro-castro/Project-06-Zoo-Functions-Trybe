@@ -14,6 +14,5 @@ function getOldestFromFirstSpecies(id) {
   //   console.log(velho);
   return Object.values(velho);
 }
-const burlId = '0e7b460e-acf4-4e17-bcb3-ee472265db83';
-// console.log(getOldestFromFirstSpecies(burlId));
+
 module.exports = getOldestFromFirstSpecies;
