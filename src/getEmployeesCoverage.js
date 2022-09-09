@@ -14,7 +14,7 @@ function animalLocation(idAnimal) {
 }
 
 function withName(dado) {
-  console.log('entrei withName');
+  // console.log('entrei withName');
   const byName = getEmployeeByName(dado);
   const obj = {
     id: byName.id,

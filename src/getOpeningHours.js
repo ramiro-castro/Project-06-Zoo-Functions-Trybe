@@ -47,35 +47,23 @@ const fix12 = (hour, open, close) => ({
 
 const openOrClosed = (period, hour, open, close) => {
   const { o, c, h } = fix12(hour, open, close);
-  // console.log(`FIX 12 o = ${o} c = ${c} h = ${h}`);
-  // console.log(fix12);
   return (period === 'AM' && h >= o) || (period === 'PM' && h < c);
 };
 
 const getOpeningHours = (day, dataHour) => {
   if (empty(day, dataHour)) return hours;
   const adjustedDay = `${day[0].toUpperCase()}${day.slice(1).toLowerCase()}`;
-   // console.log(adjustedDay);
   validateDay(adjustedDay);
   validateHour(dataHour);
   const { open, close } = hours[adjustedDay];
   if (empty(close, open)) {
-    // console.log("entrei nesse if empty");
     return 'The zoo is closed';
   }
   const period = dataHour.split('-')[1].toUpperCase();
   const hour = Number(dataHour.split(':')[0]);
   let message = 'The zoo is ';
-  //   console.log(period, hour, open, close);
-  //   console.log(typeof openOrClosed(period, hour, open, close));
   message += openOrClosed(period, hour, open, close) ? 'open' : 'closed';
   return message;
 };
-// let avalia = openOrClosed('PM', 12, 12, 12);
-// console.log(avalia);
-// avalia = openOrClosed('AM', 12, 12, 12);
-// console.log(avalia);
-// console.log(getOpeningHours('Saturday', '9:00-AM'));
 
 module.exports = getOpeningHours;
-// module.exports = openOrClosed;

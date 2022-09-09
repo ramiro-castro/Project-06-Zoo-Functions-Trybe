@@ -49,7 +49,7 @@ function animalObject(animal, option) { // sort estara ou nao em option
     if (option[index] !== undefined) {
     // console.log('entrei sera organizado em ordem alfabetica');
       obj[animal.name] = animalSex(animal, option);
-      console.log(obj);
+      // console.log(obj);
       return obj;
     }
   }
@@ -84,18 +84,15 @@ function criaObjLocation(op) {
       return objLocation;
     }
   }
-  // if (op[0] !== undefined || op[1] !== undefined || op[2] !== undefined || op[3] !== undefined || op[4] !== undefined || op[5] !== undefined) {
-  //     locations.forEach((location) => { objLocation[location] = animalName(location, op); });
-  //     return objLocation;
-  //   }
-  console.log('sai do op for');
+
+  // console.log('sai do op for');
   locations.forEach((location) => { objLocation[location] = animalLocation(location); });
   return objLocation;
 }
 
 function arrOptions(options) {
   const arrOptionsAux = [JSON.stringify(options)];
-  console.log(arrOptionsAux);
+  // console.log(arrOptionsAux);
   let aux = [];
   const option = [arrOptionsAux.find((e) => e === '{"includeNames":true}')]; // verificar se tem incluNames
   aux = arrOptionsAux.find((e) => e === '{"includeNames":true,"sorted":true}'); //
